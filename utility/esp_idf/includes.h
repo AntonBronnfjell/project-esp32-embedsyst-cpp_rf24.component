@@ -2,7 +2,7 @@
 #define RF24_UTILITY_ESP_IDF_INCLUDES_H_
 
 #define RF24_ESP_IDF
-/* Do not define RF24_SPI_PTR: ESP-IDF uses its own SPI, not Arduino global SPI */
+#define RF24_SPI_PTR  /* use _spi pointer; app calls begin(&spi0) to set it */
 
 #include <cstring>
 #include "esp_idf/RF24_arch_config.h"

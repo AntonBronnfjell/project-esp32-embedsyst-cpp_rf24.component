@@ -111,3 +111,10 @@ void SPI::transfern(char* buf, uint32_t len)
 {
     transfernb(buf, buf, len);
 }
+
+SPI_t SPI(SPI2_HOST);
+
+SPI_t& rf24_default_spi_ref()
+{
+    return SPI;
+}

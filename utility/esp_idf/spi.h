@@ -39,4 +39,9 @@ private:
     void init();
 };
 
+/** Type alias for internal use (default instance). */
+using SPI_t = SPI;
+/** Default SPI for RF24::_init_obj(); app overwrites via radio.begin(&spi0). Not declared as extern so class SPI stays visible to app. */
+SPI_t& rf24_default_spi_ref();
+
 #endif // RF24_UTILITY_ESP_IDF_SPI_H_

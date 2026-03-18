@@ -13,6 +13,7 @@
 #include "interrupt.h"
 
 #define _BV(x) (1 << (x))
+/* When RF24_SPI_PTR is set we use _spi->, not _SPI; default set in _init_obj via rf24_default_spi_ref(). */
 #define _SPI SPI
 
 #ifdef RF24_DEBUG
